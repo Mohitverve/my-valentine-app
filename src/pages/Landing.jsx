@@ -1,7 +1,6 @@
 // src/pages/Landing.jsx
-
 import React from "react";
-import { Button, Layout, Typography } from "antd";
+import { Layout, Typography, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Content } = Layout;
@@ -15,23 +14,20 @@ const Landing = () => {
       <Content
         style={{
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          textAlign: "center",
+          flexDirection: "column",
           padding: "2rem",
         }}
       >
-        <Title level={1} style={{ color: "#eb2f96", marginBottom: "2rem" }}>
-          A Special Journey for My Love
-        </Title>
+        <Title style={{ color: "#eb2f96" }}>Welcome to Our Love Adventure</Title>
         <Button
           type="primary"
           size="large"
           style={{ backgroundColor: "#eb2f96", borderColor: "#eb2f96" }}
-          onClick={() => navigate("/puzzle")}
+          onClick={() => navigate("/stage1")}
         >
-          Begin the Adventure
+          Begin Stage One
         </Button>
       </Content>
     </Layout>

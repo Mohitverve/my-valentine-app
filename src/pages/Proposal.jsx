@@ -1,5 +1,4 @@
 // src/pages/Proposal.jsx
-
 import React, { useState } from "react";
 import { Layout, Typography, Button } from "antd";
 import Confetti from "react-confetti";
@@ -16,14 +15,12 @@ const Proposal = () => {
 
   return (
     <Layout style={{ minHeight: "100vh", backgroundColor: "#fff5f5" }}>
-      {/* Only show confetti after "Yes" is clicked */}
       {showConfetti && (
         <Confetti
           width={window.innerWidth}
           height={window.innerHeight}
         />
       )}
-
       <Content
         style={{
           display: "flex",
@@ -39,20 +36,27 @@ const Proposal = () => {
         </Title>
         <Paragraph style={{ maxWidth: 600, fontSize: "1.2rem" }}>
           My love, from the moment I met you, I knew you were someone special.
-          You fill my life with joy, warmth, and laughter. 
-          I want to spend every moment making you as happy as you've made me.
+          You’ve brought so much joy and warmth into my life, and I want to
+          spend the rest of my life making you as happy as you've made me.
         </Paragraph>
-        <Paragraph style={{ maxWidth: 600, fontSize: "1.2rem", marginBottom: "2rem" }}>
-          <strong>Will you be my Valentine?</strong>
-        </Paragraph>
-        <Button
-          type="primary"
-          size="large"
-          style={{ backgroundColor: "#eb2f96", borderColor: "#eb2f96" }}
-          onClick={handleYesClick}
-        >
-          Yes, Yes, Yes!
-        </Button>
+
+
+        {!showConfetti ? (
+          <Button
+            type="primary"
+            size="large"
+            style={{ backgroundColor: "#eb2f96", borderColor: "#eb2f96" }}
+            onClick={handleYesClick}
+          >
+            Yes, Yes, Yes!
+          </Button>
+        ) : (
+          <Paragraph
+            style={{ color: "#eb2f96", fontWeight: "bold", marginTop: "1.5rem" }}
+          >
+            You said YES! I love you, always and forever. Chalo ab valentine pe aur bubu dudu bnate h  hehe
+          </Paragraph>
+        )}
       </Content>
     </Layout>
   );
