@@ -19,7 +19,7 @@ const puzzleData = [
     id: 2,
     question: "What’s my nickname for you?",
     answer: "Bubuuu",
-    hint: "It’s baby with a u",
+    hint: "It’s baby with a uuu",
   },
   {
     id: 3,
